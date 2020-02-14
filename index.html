@@ -13,7 +13,7 @@
 $(document).ready(function(){
   $("#textCheckArea").on("input", function(){
     var x = document.getElementById("textCheckArea").value;
-	var count = (x.match(/leverage/g) || []).length
+	var count = (x.match(/leverag/g) || []).length
 	$('#labelCount').text(count);
 	});
 });
