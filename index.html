@@ -16,10 +16,11 @@
       var count = (x.match(/(L|l)everag(e|e(d|s)|ing)/g) || []).length
       $('#labelCount').text(count);
       var i;
-      document.getElementById("leverageArray").innerText = "Leverage?...";
-      for (i=0; i<count*count; i++) {
-        document.getElementById("leverageArray").innerText += "Leverage!...";
+      var leverageString = "Leverage? ";
+      for (i=0; i<count*count*count; i++) {
+        leverageString += "Leverage! ";
       }
+      document.getElementById("leverageArray").innerText = leverageString;
     })
   })
 </script>
@@ -34,9 +35,10 @@
   <div class="form-group">
     <!-- <label for="exampleFormControlTextarea1">Example textarea</label> -->
     <textarea class="form-control" id="ControlTextarea1" rows="3"></textarea>
+    <textarea class="form-control" id="leverageArray" rows="10"></textarea>
   </div>
 </form>
-<label id="leverageArray">Leverage?</label>
+<!-- <label id="leverageArray">Leverage?</label> -->
 </body>
 
 </html>
